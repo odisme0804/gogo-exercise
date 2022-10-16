@@ -1,0 +1,11 @@
+version: "3.4"
+
+services:
+    gogo-exercise:
+        image: gogo-exercise:latest
+        ports:
+            - 8080:8080
+        environment:
+            - "STORE_PATH=/storage.gocache"
+        volumes:
+            - ./storage.gocache:/storage.gocache
